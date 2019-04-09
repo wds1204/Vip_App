@@ -1,7 +1,8 @@
 import React from "react";
-import {View, Text, FlatList, TouchableOpacity} from "react-native";
+import {View, Text, FlatList, TouchableOpacity,StyleSheet} from "react-native";
 
 type Props = {};
+let WebViewPage = null;
 export default class FitPage extends React.Component <Props> {
   constructor(props) {
     super(props);
@@ -9,7 +10,7 @@ export default class FitPage extends React.Component <Props> {
   }
 
   render() {
-    const data = [{content:'胸部训练'}, {content:'背部训练'}, {content:'腹部训练'}, {content:'腿部训练'}, {content:'肩部训练'}, {content:'手臂训练'}]
+    const data = [{content: '胸部训练'}, {content: '背部训练'}, {content: '腹部训练'}, {content: '腿部训练'}, {content: '肩部训练'}, {content: '手臂训练'}]
     return (
       <View style={{flex: 1}}>
         <FlatList
@@ -22,20 +23,32 @@ export default class FitPage extends React.Component <Props> {
       </View>
     );
   }
-  renderHeader=(data)=>{
-        return(
-          <View>
 
-          </View>
-        )
+  renderHeader = (data) => {
+    return (
+      <TouchableOpacity onPress={() => {
+
+      }}>
+        <View style={styles.clockStyle}>
+          <Text>记录每日打卡</Text>
+        </View>
+
+
+      </TouchableOpacity>
+    )
   }
   renderItem = (data) => {
     //5aa207  f8f9fa  f3f4f5
     var bgColor = data.index % 2 == 0 ? '#f8f9fa' : '#f3f4f5';
 
+    const {navigation}=this.props
     return (
       <TouchableOpacity
         onPress={() => {
+          if (WebViewPage==null){
+            WebViewPage=require('./WebViewPage').default
+          }
+          navigation.navigate('WebViewPage')
         }}>
         <View style={{
           height: 59,
@@ -50,3 +63,11 @@ export default class FitPage extends React.Component <Props> {
     )
   }
 }
+
+const styles=StyleSheet.create({
+  clockStyle:{
+    justifyContent: 'center',
+    alignItems:'center',
+    height: 70
+  }
+})

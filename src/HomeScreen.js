@@ -89,7 +89,7 @@ const Tab = createBottomTabNavigator(
 const AppNavigator = createStackNavigator(
   {
     Tab: {screen: Tab},
-    WebViewPage: {screen: WebViewPage}
+    // WebViewPage: {screen: WebViewPage}
   },
   {
     navigationOptions: {

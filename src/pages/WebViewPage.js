@@ -1,5 +1,6 @@
 import React from "react";
 import {View, Text} from "react-native";
+console.log('WebViewPage component loaded');
 
 type Props = {}
 export default class WebViewPage extends React.Component<Props> {
@@ -10,7 +11,7 @@ export default class WebViewPage extends React.Component<Props> {
   render() {
     return (
       <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
-        <Text>VedioPage</Text>
+        <Text>WebViewPage</Text>
       </View>
     );
   }
