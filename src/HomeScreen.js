@@ -8,6 +8,7 @@ import FitPage from './pages/FitPage'
 import VedioPage from './pages/VedioPage'
 import TabBarItem from './views/TabBarItem'
 import WebViewPage from './pages/WebViewPage'
+import FitnessArtsPage from './pages/FitnessArtsPage'
 // 关闭黄色警报
 console.disableYellowBox = true;
 console.warn('YellowBox is disabled.');
@@ -89,7 +90,8 @@ const Tab = createBottomTabNavigator(
 const AppNavigator = createStackNavigator(
   {
     Tab: {screen: Tab},
-    // WebViewPage: {screen: WebViewPage}
+    WebViewPage: {screen: WebViewPage},
+    FitnessArtsPage: {screen: FitnessArtsPage}
   },
   {
     navigationOptions: {
@@ -101,7 +103,7 @@ const AppNavigator = createStackNavigator(
       visible: false,
     },
     mode: 'card',
-    headerMode: "none"
+    // headerMode: "none"
   }
 );
 export default createAppContainer(AppNavigator);

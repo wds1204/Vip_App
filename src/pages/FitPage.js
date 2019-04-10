@@ -48,7 +48,7 @@ export default class FitPage extends React.Component <Props> {
           if (WebViewPage==null){
             WebViewPage=require('./WebViewPage').default
           }
-          navigation.navigate('WebViewPage')
+          navigation.navigate('FitnessArtsPage')
         }}>
         <View style={{
           height: 59,
