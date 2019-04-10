@@ -1,1 +1,6 @@
 export const ARMS='ARMS'
+export const SIXPACK='SIXPACK'
+export const PECTORALIS ='PECTORALIS'
+export const LATISSIMUS ='LATISSIMUS'
+export const TRAPEZIUS ='TRAPEZIUS'
+export const LEGMUSCLES ='LEGMUSCLES'

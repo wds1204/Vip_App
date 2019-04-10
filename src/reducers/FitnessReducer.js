@@ -1,9 +1,9 @@
 import *as types from '../constants/FitnessType'
-import ArmsData from '../data/ArmsData.json';
+import Datas from '../data/FitnessArtsData.json';
 
 
 const initalState={
-  armDatas:[],
+  artDatas:[],
 }
 
 function Fitness(state=initalState,action) {
@@ -11,11 +11,15 @@ function Fitness(state=initalState,action) {
   switch (action.type) {
 
     case types.ARMS:
-      console.log("Fitness  taype is ="+JSON.stringify(ArmsData.arms));
-
       return{
         ...state,
-        armDatas:ArmsData.arms
+        artDatas:Datas.arms
+      }
+      break;
+    case types.SIXPACK:
+      return{
+        ...state,
+        artDatas:Datas.sixpack
       }
       break;
     default:

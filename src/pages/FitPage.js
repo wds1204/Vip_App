@@ -45,10 +45,10 @@ export default class FitPage extends React.Component <Props> {
     return (
       <TouchableOpacity
         onPress={() => {
-          if (WebViewPage==null){
-            WebViewPage=require('./WebViewPage').default
-          }
-          navigation.navigate('FitnessArtsPage')
+
+          navigation.navigate('FitnessArtsPage',{
+            index:data.index
+          })
         }}>
         <View style={{
           height: 59,

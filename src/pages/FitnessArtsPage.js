@@ -6,8 +6,8 @@ import {
 import {connect} from "react-redux";
 
 
-import {armFitness} from '../actions/FitnessAction'
-import ArmsData from "../data/ArmsData";
+import {armFitness, sixPackFitness} from '../actions/FitnessAction'
+import Datas from "../data/FitnessArtsData";
 
 
 class FitnessArtsPage extends Component {
@@ -17,7 +17,22 @@ class FitnessArtsPage extends Component {
 
   constructor(props) {
     super(props)
-    this.props.armFitness()
+    const {navigation, armFitness, sixPackFitness} = this.props;
+    const index = navigation.getParam('index');
+    console.log("index====" + index)
+    if (index === 0) {
+
+    } else if (index === 1) {
+
+    } else if (index === 2) {
+      sixPackFitness()
+    } else if (index === 3) {
+
+    } else if (index === 4) {
+
+    } else if (index === 5) {
+      armFitness()
+    }
 
   }
 
@@ -26,30 +41,27 @@ class FitnessArtsPage extends Component {
   };
 
   render() {
-    let armDatas = this.props.armDatas;
-    console.log("armDatas===1" + JSON.stringify(armDatas))
-    console.log("armDatas===2" + JSON.stringify(armDatas[0]))
-    console.log("armDatas===2" + armDatas.length)
+    let artDatas = this.props.artDatas;
     return (
       <View style={{flex: 1}}>
         <FlatList style={{flex: 1, backgroundColor: "#F2F6FA"}}
                   renderItem={this.renderItem.bind(this)}
-                  data={armDatas}/>
+                  data={artDatas}/>
       </View>
     )
   }
 
 
   renderItem = (data) => {
-        console.log("renderItem=="+JSON.stringify(data))
+    console.log("renderItem==" + JSON.stringify(data))
     const item = data.item
     return (
       <TouchableOpacity onPress={() => {
 
       }}>
-        <View style={{flex:1,flexDirection:'row',padding:20}}>
-          <Image resizeMode={'contain'} style={styles.imageStyle} source={{uri:item.icon}}/>
-          <Text style={{width:200}} numberOfLines={3}>{item.title}</Text>
+        <View style={{flex: 1, flexDirection: 'row', padding: 20}}>
+          <Image resizeMode={'contain'} style={styles.imageStyle} source={{uri: item.icon}}/>
+          <Text style={{width: 200}} numberOfLines={3}>{item.title}</Text>
         </View>
       </TouchableOpacity>
     )
@@ -67,14 +79,16 @@ function mapStateToProps(state, ownProps) {//no a object
   console.log("mapStateToProps  taype is =" + JSON.stringify(state));
 
   return {//must return a object
-    armDatas: state.fitness.armDatas,
+    artDatas: state.fitness.artDatas,
   }
 
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    armFitness: () => dispatch(armFitness())
+    armFitness: () => dispatch(armFitness()),
+    sixPackFitness: () => dispatch(sixPackFitness())
+
   }
 }
 
