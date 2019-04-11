@@ -6,7 +6,14 @@ import {
 import {connect} from "react-redux";
 
 
-import {armFitness, sixPackFitness} from '../actions/FitnessAction'
+import {
+  armFitness,
+  sixPackFitness,
+  pecsFitness,
+  latisFitness,
+  TrapFitness,
+  LegFitness
+} from '../actions/FitnessAction'
 import Datas from "../data/FitnessArtsData";
 
 
@@ -17,19 +24,19 @@ class FitnessArtsPage extends Component {
 
   constructor(props) {
     super(props)
-    const {navigation, armFitness, sixPackFitness} = this.props;
+    const {navigation, armFitness, sixPackFitness,latisFitness,pecsFitness,LegFitness,TrapFitness} = this.props;
     const index = navigation.getParam('index');
     console.log("index====" + index)
     if (index === 0) {
-
+      pecsFitness()
     } else if (index === 1) {
-
+      latisFitness()
     } else if (index === 2) {
       sixPackFitness()
     } else if (index === 3) {
-
+      LegFitness()
     } else if (index === 4) {
-
+      TrapFitness()
     } else if (index === 5) {
       armFitness()
     }
@@ -69,12 +76,6 @@ class FitnessArtsPage extends Component {
 
 }
 
-//(state) => ({
-//     armDatas: state.armDatas,
-//
-//   }), (dispatch) => ({
-//     armFitness: () => dispatch(armFitness())
-//   })
 function mapStateToProps(state, ownProps) {//no a object
   console.log("mapStateToProps  taype is =" + JSON.stringify(state));
 
@@ -87,7 +88,11 @@ function mapStateToProps(state, ownProps) {//no a object
 const mapDispatchToProps = (dispatch) => {
   return {
     armFitness: () => dispatch(armFitness()),
-    sixPackFitness: () => dispatch(sixPackFitness())
+    sixPackFitness: () => dispatch(sixPackFitness()),
+    pecsFitness: () => dispatch(pecsFitness()),
+    latisFitness: () => dispatch(latisFitness()),
+    TrapFitness: () => dispatch(TrapFitness()),
+    LegFitness: () => dispatch(LegFitness()),
 
   }
 }

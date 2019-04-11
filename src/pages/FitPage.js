@@ -1,5 +1,6 @@
 import React from "react";
-import {View, Text, FlatList, TouchableOpacity,StyleSheet} from "react-native";
+import {View, Text, FlatList, TouchableOpacity, StyleSheet} from "react-native";
+import Panel from "../views/panels/Panel";
 
 type Props = {};
 let WebViewPage = null;
@@ -12,9 +13,9 @@ export default class FitPage extends React.Component <Props> {
   render() {
     const data = [{content: '胸部训练'}, {content: '背部训练'}, {content: '腹部训练'}, {content: '腿部训练'}, {content: '肩部训练'}, {content: '手臂训练'}]
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1,backgroundColor:"#F2F6FA"}}>
         <FlatList
-          style={{flex: 1, backgroundColor: "#F2F6FA"}}
+          style={{flex: 1, paddingBottom:20}}
           data={data}
           renderItem={this.renderItem.bind(this)}
           ListHeaderComponent={this.renderHeader.bind(this)}
@@ -33,7 +34,6 @@ export default class FitPage extends React.Component <Props> {
           <Text>记录每日打卡</Text>
         </View>
 
-
       </TouchableOpacity>
     )
   }
@@ -41,33 +41,44 @@ export default class FitPage extends React.Component <Props> {
     //5aa207  f8f9fa  f3f4f5
     var bgColor = data.index % 2 == 0 ? '#f8f9fa' : '#f3f4f5';
 
-    const {navigation}=this.props
+    const {navigation} = this.props
     return (
-      <TouchableOpacity
-        onPress={() => {
-
-          navigation.navigate('FitnessArtsPage',{
-            index:data.index
-          })
-        }}>
-        <View style={{
-          height: 59,
-          flexDirection: 'row',
-          backgroundColor: bgColor,
-          alignItems: 'center',
-          justifyContent: 'space-around'
-        }}>
-          <Text>{data.item.content}</Text>
+      <Panel expanded={data.index == 0 ? true : false} title={data.item.content} initHeight={40}>
+        <View style={styles.initItemStyle}>
+          <TouchableOpacity onPress={() => {
+            navigation.navigate('FitnessArtsPage', {
+              index: data.index
+            })
+          }}>
+            <Text style={styles.tagStyle}>相关文章</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={()=>{
+            navigation.navigate("FitnessVediosPage",{
+              index:data.index
+            })
+          }}>
+          <Text>相关视频</Text>
+          </TouchableOpacity>
         </View>
-      </TouchableOpacity>
+      </Panel>
+
+
     )
   }
 }
 
-const styles=StyleSheet.create({
-  clockStyle:{
+const styles = StyleSheet.create({
+  clockStyle: {
     justifyContent: 'center',
-    alignItems:'center',
+    alignItems: 'center',
     height: 70
+  },
+  initItemStyle: {
+    height: 30,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  tagStyle: {
+    marginRight: 50
   }
 })
