@@ -1,20 +1,23 @@
 import React, {Component} from 'react';
 
 import {StyleSheet, Text, View, Image, TouchableHighlight, Animated} from 'react-native';
-
-class Panel extends Component{
-  constructor(props){
+class Panel extends Component {
+  constructor(props) {
     super(props);
     this.icons = { //Step 2
-      'up' : require('./images/Arrowhead-01-128.png'),
-      'down' : require('./images/Arrowhead-Down-01-128.png')
+      'up': require('./images/Arrowhead-01-128.png'),
+      'down': require('./images/Arrowhead-Down-01-128.png')
     };
+    this.changeValue = props.expanded?180:0;
+
     this.state = { //Step 3
-      title : props.title,
-      expanded : props.expanded,
-      animation : new Animated.Value(props.expanded?42.86+props.initHeight:42.86)
+      title: props.title,
+      expanded: props.expanded,
+      animation: new Animated.Value(props.expanded ? 42.86 + props.initHeight : 42.86),
+      rotateValue: new Animated.Value(props.expanded?180:0),
 
     };
+
 
   }
 
@@ -23,26 +26,33 @@ class Panel extends Component{
   }
 
 
-  render(){
+  render() {
     let icon = this.icons['down']
-    if(this.state.expanded){
-      icon = this.icons['up'];
-    }
+    // if (this.state.expanded) {
+    //   icon = this.icons['up'];
+    // }
     return (
 
-      <Animated.View style={[styles.container,{height: this.state.animation}]}
-        >
+      <Animated.View style={[styles.container, {height: this.state.animation}]}
+      >
         <View style={styles.titleContainer}
-            onLayout={this._setMinHeight.bind(this)}>
+              onLayout={this._setMinHeight.bind(this)}>
           <Text style={styles.title}>{this.state.title}</Text>
           <TouchableHighlight
             style={styles.button}
             onPress={this.toggle.bind(this)}
             underlayColor="#f1f1f1">
-            <Image
-              style={styles.buttonImage}
+            <Animated.Image
+              style={[styles.buttonImage, {
+                transform: [{
+                  rotate: this.state.rotateValue.interpolate({ // 旋转，使用插值函数做值映射
+                    inputRange: [0, 360],
+                    outputRange: ['0deg', '360deg'],
+                  })
+                },]
+              }]}
               source={icon}
-            ></Image>
+            ></Animated.Image>
           </TouchableHighlight>
         </View>
         <View style={styles.body}
@@ -53,25 +63,27 @@ class Panel extends Component{
     );
   }
 
-  _setMaxHeight(event){
+  _setMaxHeight(event) {
     this.setState({
-      maxHeight : event.nativeEvent.layout.height
+      maxHeight: event.nativeEvent.layout.height
     });
   }
 
-  _setMinHeight(event){
+  _setMinHeight(event) {
     this.setState({
-      minHeight : event.nativeEvent.layout.height
+      minHeight: event.nativeEvent.layout.height
     });
   }
-  toggle(){ //Step 1
-    let initialValue = this.state.expanded? this.state.maxHeight +   this.state.minHeight : this.state.minHeight,
-      finalValue = this.state.expanded? this.state.minHeight : this.state.maxHeight + this.state.minHeight;
+
+  toggle() { //Step 1
+    this.changeRorateValue();
+    let initialValue = this.state.expanded ? this.state.maxHeight + this.state.minHeight : this.state.minHeight,
+      finalValue = this.state.expanded ? this.state.minHeight : this.state.maxHeight + this.state.minHeight;
     this.setState({
-      expanded : !this.state.expanded
+      expanded: !this.state.expanded
     });
-    console.log('toggle   initialValue==='+initialValue)
-    console.log('toggle   finalValue==='+finalValue)
+    console.log('toggle   initialValue===' + initialValue)
+    console.log('toggle   finalValue===' + finalValue)
     this.state.animation.setValue(initialValue);
     Animated.spring(
       this.state.animation,
@@ -81,6 +93,20 @@ class Panel extends Component{
     ).start();
   }
 
+  changeRorateValue() {
+    this.changeValue += 180;
+    Animated.timing(                  // Animate over time
+      this.state.rotateValue,            // The animated value to drive
+      {
+        toValue: this.changeValue,                   // Animate to opacity: 1 (opaque)
+        duration: 400,              // Make it take a while
+      }
+    ).start(() =>
+
+      this.state.rotateValue.setValue(this.changeValue)
+    );
+  }
+
 }
 
 var styles = StyleSheet.create({
@@ -88,7 +114,7 @@ var styles = StyleSheet.create({
     backgroundColor: '#fff',
     margin: 5,
     overflow: 'hidden',
-    borderRadius:5
+    borderRadius: 5
   },
   titleContainer: {
     flexDirection: 'row'

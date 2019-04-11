@@ -1,5 +1,5 @@
 import React from "react";
-import {View, Text, FlatList, TouchableOpacity, StyleSheet} from "react-native";
+import {View, Text, FlatList, TouchableOpacity, StyleSheet,Image} from "react-native";
 import Panel from "../views/panels/Panel";
 
 type Props = {};
@@ -31,7 +31,13 @@ export default class FitPage extends React.Component <Props> {
 
       }}>
         <View style={styles.clockStyle}>
+          <Image
+            resizeMode={'contain'}
+            style={styles.colockImgStyle}
+            source={require('../imgs/colock.png')}
+            />
           <Text>记录每日打卡</Text>
+
         </View>
 
       </TouchableOpacity>
@@ -43,7 +49,7 @@ export default class FitPage extends React.Component <Props> {
 
     const {navigation} = this.props
     return (
-      <Panel expanded={data.index == 0 ? true : false} title={data.item.content} initHeight={40}>
+      <Panel expanded={data.index == 0 ? true : false} title={data.item.content} initHeight={60}>
         <View style={styles.initItemStyle}>
           <TouchableOpacity onPress={() => {
             navigation.navigate('FitnessArtsPage', {
@@ -68,13 +74,19 @@ export default class FitPage extends React.Component <Props> {
 }
 
 const styles = StyleSheet.create({
+  colockImgStyle:{
+    height:30,
+    width:30
+  },
   clockStyle: {
-    justifyContent: 'center',
     alignItems: 'center',
-    height: 70
+    height: 70,
+    flexDirection: 'row',
+    justifyContent:"center"
+
   },
   initItemStyle: {
-    height: 30,
+    height: 60,
     flexDirection: 'row',
     alignItems: 'center'
   },
