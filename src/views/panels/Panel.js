@@ -82,8 +82,6 @@ class Panel extends Component {
     this.setState({
       expanded: !this.state.expanded
     });
-    console.log('toggle   initialValue===' + initialValue)
-    console.log('toggle   finalValue===' + finalValue)
     this.state.animation.setValue(initialValue);
     Animated.spring(
       this.state.animation,

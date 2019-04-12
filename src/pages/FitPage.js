@@ -1,5 +1,5 @@
 import React from "react";
-import {View, Text, FlatList, TouchableOpacity, StyleSheet,Image} from "react-native";
+import {View, Text, FlatList, TouchableOpacity, StyleSheet, Image, SafeAreaView} from "react-native";
 import Panel from "../views/panels/Panel";
 
 type Props = {};
@@ -13,30 +13,32 @@ export default class FitPage extends React.Component <Props> {
   render() {
     const data = [{content: '胸部训练'}, {content: '背部训练'}, {content: '腹部训练'}, {content: '腿部训练'}, {content: '肩部训练'}, {content: '手臂训练'}]
     return (
-      <View style={{flex: 1,backgroundColor:"#F2F6FA"}}>
-        <FlatList
-          style={{flex: 1, paddingBottom:20}}
-          data={data}
-          renderItem={this.renderItem.bind(this)}
-          ListHeaderComponent={this.renderHeader.bind(this)}
+      <SafeAreaView  style={{flex: 1}}>
+        <View style={{flex: 1, backgroundColor: "#F2F6FA"}}>
+          <FlatList
+            style={{flex: 1, paddingBottom: 20}}
+            data={data}
+            renderItem={this.renderItem.bind(this)}
+            ListHeaderComponent={this.renderHeader.bind(this)}
 
-        />
-      </View>
+          />
+        </View>
+      </SafeAreaView>
     );
   }
 
   renderHeader = (data) => {
     return (
       <TouchableOpacity onPress={() => {
-
+          this.props.navigation.navigate('FitColockPage')
       }}>
         <View style={styles.clockStyle}>
           <Image
             resizeMode={'contain'}
             style={styles.colockImgStyle}
             source={require('../imgs/colock.png')}
-            />
-          <Text>记录每日打卡</Text>
+          />
+          <Text>打卡</Text>
 
         </View>
 
@@ -58,12 +60,12 @@ export default class FitPage extends React.Component <Props> {
           }}>
             <Text style={styles.tagStyle}>相关文章</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>{
-            navigation.navigate("FitnessVediosPage",{
-              index:data.index
+          <TouchableOpacity onPress={() => {
+            navigation.navigate("FitnessVediosPage", {
+              index: data.index
             })
           }}>
-          <Text>相关视频</Text>
+            <Text>相关视频</Text>
           </TouchableOpacity>
         </View>
       </Panel>
@@ -74,15 +76,15 @@ export default class FitPage extends React.Component <Props> {
 }
 
 const styles = StyleSheet.create({
-  colockImgStyle:{
-    height:30,
-    width:30
+  colockImgStyle: {
+    height: 50,
+    width: 50
   },
   clockStyle: {
     alignItems: 'center',
     height: 70,
     flexDirection: 'row',
-    justifyContent:"center"
+    justifyContent: "center"
 
   },
   initItemStyle: {

@@ -6,7 +6,9 @@ import {
 import {connect} from "react-redux";
 
 class FitnessVediosPage extends Component {
-
+  static navigationOptions={
+    title:'FIT'
+  }
   render(): React.ReactNode {
     return (<View style={styles.containStyle}><Text>FitnessVediosPage</Text></View>)
   }

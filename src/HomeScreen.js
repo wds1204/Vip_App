@@ -10,6 +10,7 @@ import TabBarItem from './views/TabBarItem'
 import WebViewPage from './pages/WebViewPage'
 import FitnessArtsPage from './pages/FitnessArtsPage'
 import FitnessVediosPage from './pages/FitnessVediosPage'
+import FitColockPage from './pages/FitColockPage'
 // 关闭黄色警报
 console.disableYellowBox = true;
 console.warn('YellowBox is disabled.');
@@ -99,6 +100,7 @@ const AppNavigator = createStackNavigator(
     WebViewPage: {screen: WebViewPage},
     FitnessArtsPage: {screen: FitnessArtsPage},
     FitnessVediosPage: {screen: FitnessVediosPage},
+    FitColockPage: {screen: FitColockPage},
 
   },
   {
