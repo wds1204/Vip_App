@@ -17,11 +17,12 @@ class FitColockPage extends Component {
     super(prop)
     this.currentDate = moment().utcOffset(480).format("YYYY-MM-DD");
     let week = moment(this.currentDate).format('d');
+    console.log("week==="+week)
+      if (week==0)
+    this.endDate = moment(this.currentDate).add(7 - week==0?7:week, 'days').format("YYYY-MM-DD")
 
-    this.endDate = moment(this.currentDate).add(7 - week, 'days').format("YYYY-MM-DD")
 
-
-    this.startDate = moment(this.currentDate).subtract(week - 1, "days").format("YYYY-MM-DD")
+    this.startDate = moment(this.currentDate).subtract(week - week==0?7:1, "days").format("YYYY-MM-DD")
     console.log("time==" + this.currentDate);
 
     this.state = {

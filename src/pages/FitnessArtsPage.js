@@ -64,11 +64,13 @@ class FitnessArtsPage extends Component {
     const item = data.item
     return (
       <TouchableOpacity onPress={() => {
-
+          this.props.navigation.navigate('WebViewPage', {
+              url: item.url
+          })
       }}>
-        <View style={{flex: 1, flexDirection: 'row', padding: 20}}>
-          <Image resizeMode={'contain'} style={styles.imageStyle} source={{uri: item.icon}}/>
-          <Text style={{width: 200}} numberOfLines={3}>{item.title}</Text>
+        <View style={{flex: 1, flexDirection: 'row', padding: 10}}>
+          <Image resizeMode={'cover'} style={styles.imageStyle} source={{uri: item.icon}}/>
+          <Text style={{width: 200,marginLeft:5}} numberOfLines={3}>{item.title}</Text>
         </View>
       </TouchableOpacity>
     )
@@ -102,7 +104,8 @@ export default connect(mapStateToProps, mapDispatchToProps)(FitnessArtsPage);
 const styles = StyleSheet.create({
 
   imageStyle: {
+    borderRadius:5,
     height: 90,
-    width: 160
+    width: 130
   }
 })
