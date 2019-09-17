@@ -1,5 +1,10 @@
 import React from "react";
 import {View, Text, WebView, SafeAreaView} from "react-native";
+import PermissionUtil from "../utils/PermissionUtil";
+import Permissions from 'react-native-permissions'
+
+
+
 
 export default class WeChatPage extends React.Component {
 
@@ -8,6 +13,16 @@ export default class WeChatPage extends React.Component {
     header: false,
     gesturesEnabled: false
   };
+  componentDidMount(): void {
+    PermissionUtil.checkPermission((suc)=>{
+      console.log("checkPermission 成功"+JSON.stringify(suc))
+    },(fail)=>{
+      console.log("checkPermission 失败"+JSON.stringify(fail))
+    },["camera","photo"])
+
+
+  }
+
 
   render() {
     return (

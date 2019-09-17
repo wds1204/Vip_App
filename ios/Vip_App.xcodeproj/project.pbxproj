@@ -41,6 +41,15 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
+		E45AFEB84105490BB280C8D2 /* Alipay.app in Resources */ = {isa = PBXBuildFile; fileRef = E4DC08EF9A9C4284BBA95EE6 /* Alipay.app */; };
+		3740A9DCB9AD45928505CD80 /* AlipayTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = DB97447A28C948FA9A32D629 /* AlipayTests.xctest */; };
+		E302D992E4D749BDA809C713 /* Alipay-tvOS.app in Resources */ = {isa = PBXBuildFile; fileRef = B4CDA541BD114900937FF49D /* Alipay-tvOS.app */; };
+		DFFEEF0CDF3A4DDF8648675C /* Alipay-tvOSTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 4EC8C3C0516B49E482C95185 /* Alipay-tvOSTests.xctest */; };
+		D931ACD3EB5E4EBFBF51AF3D /* futurelibrary.app in Resources */ = {isa = PBXBuildFile; fileRef = CB72800A7CF6429B87B7FCA5 /* futurelibrary.app */; };
+		88890204EBC4454EAA6022EA /* futurelibraryTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 73FC6B1AA4F54B4AA4453D0E /* futurelibraryTests.xctest */; };
+		E1749EC06A49482180D20D63 /* futurelibrary-tvOS.app in Resources */ = {isa = PBXBuildFile; fileRef = 9584B95F031C433A89781C0B /* futurelibrary-tvOS.app */; };
+		FBECC07F535F408B96FA866D /* futurelibrary-tvOSTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 1B2DB4E8552649EE8BF5B1CD /* futurelibrary-tvOSTests.xctest */; };
+		2DBCAE3827424362A6122D2A /* libRNFuture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE154E064DC4291941836F9 /* libRNFuture.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -365,6 +374,18 @@
 		B37C2AE370E64B32A78E8C6E /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		331296172D954F578EAB1079 /* Alipay.xcodeproj */ = {isa = PBXFileReference; name = "Alipay.xcodeproj"; path = "../node_modules/react-native-wds-alipay/ios/Alipay.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		E4DC08EF9A9C4284BBA95EE6 /* Alipay.app */ = {isa = PBXFileReference; name = "Alipay.app"; path = "Alipay.app"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.application; explicitFileType = undefined; includeInIndex = 0; };
+		DB97447A28C948FA9A32D629 /* AlipayTests.xctest */ = {isa = PBXFileReference; name = "AlipayTests.xctest"; path = "AlipayTests.xctest"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.cfbundle; explicitFileType = undefined; includeInIndex = 0; };
+		B4CDA541BD114900937FF49D /* Alipay-tvOS.app */ = {isa = PBXFileReference; name = "Alipay-tvOS.app"; path = "Alipay-tvOS.app"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.application; explicitFileType = undefined; includeInIndex = 0; };
+		4EC8C3C0516B49E482C95185 /* Alipay-tvOSTests.xctest */ = {isa = PBXFileReference; name = "Alipay-tvOSTests.xctest"; path = "Alipay-tvOSTests.xctest"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.cfbundle; explicitFileType = undefined; includeInIndex = 0; };
+		31AEF478844A4C6089B417FA /* futurelibrary.xcodeproj */ = {isa = PBXFileReference; name = "futurelibrary.xcodeproj"; path = "../node_modules/react-native-future-library/ios/futurelibrary.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		CB72800A7CF6429B87B7FCA5 /* futurelibrary.app */ = {isa = PBXFileReference; name = "futurelibrary.app"; path = "futurelibrary.app"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.application; explicitFileType = undefined; includeInIndex = 0; };
+		73FC6B1AA4F54B4AA4453D0E /* futurelibraryTests.xctest */ = {isa = PBXFileReference; name = "futurelibraryTests.xctest"; path = "futurelibraryTests.xctest"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.cfbundle; explicitFileType = undefined; includeInIndex = 0; };
+		9584B95F031C433A89781C0B /* futurelibrary-tvOS.app */ = {isa = PBXFileReference; name = "futurelibrary-tvOS.app"; path = "futurelibrary-tvOS.app"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.application; explicitFileType = undefined; includeInIndex = 0; };
+		1B2DB4E8552649EE8BF5B1CD /* futurelibrary-tvOSTests.xctest */ = {isa = PBXFileReference; name = "futurelibrary-tvOSTests.xctest"; path = "futurelibrary-tvOSTests.xctest"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.cfbundle; explicitFileType = undefined; includeInIndex = 0; };
+		5F790F6AB5694D538821FDB9 /* RNFuture.xcodeproj */ = {isa = PBXFileReference; name = "RNFuture.xcodeproj"; path = "../node_modules/react-native-future/ios/RNFuture.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		2AE154E064DC4291941836F9 /* libRNFuture.a */ = {isa = PBXFileReference; name = "libRNFuture.a"; path = "libRNFuture.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +415,11 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				56ECB9E7AD8649C0AB97152C /* libRNGestureHandler.a in Frameworks */,
+				E45AFEB84105490BB280C8D2 /* Alipay.app in Resources */,
+				3740A9DCB9AD45928505CD80 /* AlipayTests.xctest in Resources */,
+				D931ACD3EB5E4EBFBF51AF3D /* futurelibrary.app in Resources */,
+				88890204EBC4454EAA6022EA /* futurelibraryTests.xctest in Resources */,
+				2DBCAE3827424362A6122D2A /* libRNFuture.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +437,10 @@
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
 				6D3CED6893C2474A9DD636C1 /* libRNGestureHandler-tvOS.a in Frameworks */,
+				E302D992E4D749BDA809C713 /* Alipay-tvOS.app in Resources */,
+				DFFEEF0CDF3A4DDF8648675C /* Alipay-tvOSTests.xctest in Resources */,
+				E1749EC06A49482180D20D63 /* futurelibrary-tvOS.app in Resources */,
+				FBECC07F535F408B96FA866D /* futurelibrary-tvOSTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +624,9 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				B37C2AE370E64B32A78E8C6E /* RNGestureHandler.xcodeproj */,
+				331296172D954F578EAB1079 /* Alipay.xcodeproj */,
+				31AEF478844A4C6089B417FA /* futurelibrary.xcodeproj */,
+				5F790F6AB5694D538821FDB9 /* RNFuture.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1233,12 +1266,24 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-wds-alipay/ios/Alipay",
+					"$(SRCROOT)/../node_modules/react-native-future-library/ios/futurelibrary",
+					"$(SRCROOT)/../node_modules/react-native-future/ios",
 				);
 				INFOPLIST_FILE = Vip_AppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1260,12 +1305,24 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-wds-alipay/ios/Alipay",
+					"$(SRCROOT)/../node_modules/react-native-future-library/ios/futurelibrary",
+					"$(SRCROOT)/../node_modules/react-native-future/ios",
 				);
 				INFOPLIST_FILE = Vip_AppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1290,6 +1347,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-wds-alipay/ios/Alipay",
+					"$(SRCROOT)/../node_modules/react-native-future-library/ios/futurelibrary",
+					"$(SRCROOT)/../node_modules/react-native-future/ios",
 				);
 				INFOPLIST_FILE = Vip_App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1316,6 +1376,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-wds-alipay/ios/Alipay",
+					"$(SRCROOT)/../node_modules/react-native-future-library/ios/futurelibrary",
+					"$(SRCROOT)/../node_modules/react-native-future/ios",
 				);
 				INFOPLIST_FILE = Vip_App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1347,11 +1410,23 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-wds-alipay/ios/Alipay",
+					"$(SRCROOT)/../node_modules/react-native-future-library/ios/futurelibrary",
+					"$(SRCROOT)/../node_modules/react-native-future/ios",
 				);
 				INFOPLIST_FILE = "Vip_App-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1382,11 +1457,23 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-wds-alipay/ios/Alipay",
+					"$(SRCROOT)/../node_modules/react-native-future-library/ios/futurelibrary",
+					"$(SRCROOT)/../node_modules/react-native-future/ios",
 				);
 				INFOPLIST_FILE = "Vip_App-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1416,11 +1503,23 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-wds-alipay/ios/Alipay",
+					"$(SRCROOT)/../node_modules/react-native-future-library/ios/futurelibrary",
+					"$(SRCROOT)/../node_modules/react-native-future/ios",
 				);
 				INFOPLIST_FILE = "Vip_App-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1450,11 +1549,23 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-wds-alipay/ios/Alipay",
+					"$(SRCROOT)/../node_modules/react-native-future-library/ios/futurelibrary",
+					"$(SRCROOT)/../node_modules/react-native-future/ios",
 				);
 				INFOPLIST_FILE = "Vip_App-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

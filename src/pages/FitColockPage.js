@@ -31,6 +31,7 @@ class FitColockPage extends Component {
       endDate: this.endDate,
 
     }
+
   }
 
   render() {
@@ -54,10 +55,6 @@ class FitColockPage extends Component {
     this.setState({
       currentDate: moment(currentDate).format("YYYY-MM-DD")
     })
-
-  }
-
-  selectH5Date() {
 
   }
 

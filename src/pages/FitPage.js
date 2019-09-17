@@ -1,6 +1,7 @@
 import React from "react";
 import {View, Text, FlatList, TouchableOpacity, StyleSheet, Image, SafeAreaView} from "react-native";
 import Panel from "../views/panels/Panel";
+import PermissionUtil from "../utils/PermissionUtil";
 
 type Props = {};
 let WebViewPage = null;
@@ -8,6 +9,14 @@ export default class FitPage extends React.Component <Props> {
   constructor(props) {
     super(props);
 
+  }
+
+  componentDidMount(): void {
+    let canOpenSettings = ["camera","photo"]
+    console.log("canOpenSettings"+canOpenSettings.length)
+    PermissionUtil.request(()=>{
+      console.log("requestPermission 成功")
+    },null,canOpenSettings,0)
   }
 
   render() {
